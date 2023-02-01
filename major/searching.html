@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="searching.css">
+    <title>Searching</title>
+    
+</head>
+<body>
+    <div id="background-img">
+        <nav>
+            <h1 id="blk">SEARCHING</h1>
+            
+        </nav>
+
+        
+        <div class="array" id="array">
+            <!-- <p>Searching in progress</p> -->
+
+            
+        </div>
+
+        
+
+
+        <div class="btn-group">
+            <button id="linearSearch" >Linear Search</button>
+            <button id="binarySearch" onclick=BinarySearch()>Binary Search</button>
+           
+        </div>
+        <br>
+        <div style="text-align: center">
+            <label for="fname" id="blk">
+                Number to be Searched:
+            </label>
+            <input type="text" id="fname" class="c1" name="fname" />
+            <br /><br />
+            
+            <br />
+            <br />
+            <div id="text"></div>
+            </div>
+        <div class="detail">
+            
+           <br>
+
+        
+    </div>-->
+
+
+        <div id="side-btn" class="side-btn">
+
+
+            <a href="#" id="code" onclick=opencode()>Code</a>
+            <a href="#" id="desc" onclick=opendesc()>Crisp Description</a>
+            <a href="#" id="time-complexity" onclick=opentc()>Time Complexity</a>
+          </div>
+
+          <div id="code-snippet" class="code-snippet">
+            <a href="javascript:void(0)" class="closebtn" onclick="closecode()">&times;</a>
+
+            <div class="overlay-content">
+            <h1>CODE</h1>
+            <h2>Linear Search</h2>
+            <p>void search(int arr[], int N, int x)<br>
+                {
+                    int i;<br>
+                    bool flag;<br>
+                    for (i = 0; i < N; i++)<br>
+                    {<br>
+                        if (arr[i] == x)<br>
+                        flag=true;<br>
+                    }<br>
+                    if(flag==true)<br>
+                    cout<<"Element found";<br>
+                    else<br>
+                    cout<<"Element not found";<br>
+                }</p><br>
+                <h2>Binary Search</h2>
+                <p>binarySearch(arr, x, low, high)<br>
+        repeat till low = high<br>
+               mid = (low + high)/2<br>
+                   if (x == arr[mid])<br>
+                   return mid<br>
+                   <br>
+                   else if (x > arr[mid]) // x is on the right side<br>
+                       low = mid + 1<br>
+                       <br>
+                   else                  // x is on the left side<br>
+                       high = mid - 1<br>
+                    </p>
+                
+
+        </div>
+          </div>
+
+
+          <div id="Description" class="Description">
+            <a href="javascript:void(0)" class="closebtn" onclick="closedesc()">&times;</a>
+
+            <div class="overlay-content">
+            <h1>Description</h1>
+            <p><h2>Linear Search</h2> Linear Search is defined as a sequential search algorithm that starts at one end and goes through each element of a list until the desired element is found, otherwise the search continues till the end of the data set. It is the easiest searching algorithm.<br><br>
+            <h2>Binary Search</h2>
+            Binary Search is a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(Log n). </p>
+
+        </div>
+          </div>
+
+          <div id="time-complex" class="time-complex">
+            <a href="javascript:void(0)" class="closebtn" onclick="closetc()">&times;</a>
+
+            <div class="overlay-content">
+            <h1>Time Complexity</h1>
+            
+                <p><h2>Linear Search</h2><h3>Best Case Complexity -</h3> In Linear search, best case occurs when the element we are finding is at the first position of the array. The best-case time complexity of linear search is O(1).<br>
+                <h3>Average Case Complexity -</h3>The average case time complexity of linear search is O(n).<br>
+            <h3>Worst Case Complexity -</h3> In Linear search, the worst case occurs when the element we are looking is present at the end of the array. The worst-case in linear search could be when the target element is not present in the given array, and we have to traverse the entire array. The worst-case time complexity of linear search is O(n).<br><br>
+                <h2>Binary Search</h2><h3>Best Case Complexity -</h3> In Binary search, best case occurs when the element to search is found in first comparison, i.e., when the first middle element itself is the element to be searched. The best-case time complexity of Binary search is O(1).<br>
+            <h3>Average Case Complexity -</h3> The average case time complexity of Binary search is O(logn).<br>
+        <h3>Worst Case Complexity -</h3> In Binary search, the worst case occurs, when we have to keep reducing the search space till it has only one element. The worst-case time complexity of Binary search is O(logn).
+            </p>
+
+        </div>
+    </div>
+  
+
+        <div class="functionality">
+
+          <button type="button" id="new-array" class="new-array">Generate array</button>
+
+          <button type="button" id="new-array" class="new-array"onclick=generatesortedArray()>Generate Sorted array</button>
+
+            <button id="play-btn">Play</button>
+
+            <button id="pause-btn">Pause</button>
+
+            <br>
+            <br><br>
+
+        <div id="input">
+            <span id="size" >Size
+                <input id="arr_sz" type="range" min="5" max="30" step="1" value="30">
+            </span>
+
+            <span id="speed">Speed
+                <input id="speed_input" type="range" min="20" max="300" stepDown="10" value="60">
+            </span>
+        </div>
+
+        </div>
+
+
+        
+    </div>
+
+    <script src="linearSearch.js"></script>
+    
+    <script src="binarySearch.js"></script>
+    <script src="searching.js"></script>
+    <script src="addJS.js"></script>
+
+</body>
+</html>
